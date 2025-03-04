@@ -166,7 +166,7 @@ export default function Row3() {
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
-              <PieChart width={110} height={100}>
+              <PieChart width={110} height={80}>
                 <Pie
                   stroke="none"
                   data={data}
@@ -175,7 +175,7 @@ export default function Row3() {
                   paddingAngle={2}
                   dataKey="value"
                 >
-                  {data.map((entry, index) => (
+                  {data.map((_, index) => (
                     <Cell key={`cell-${index}`} fill={pieColors[index]} />
                   ))}
                 </Pie>
@@ -193,7 +193,7 @@ export default function Row3() {
         />
         <Box
           height="15px"
-          margin="1.25rem 1rem 0.4rem 1rem"
+          margin="2.25rem 1rem 0.4rem 1rem"
           bgcolor={palette.primary[800]}
           borderRadius="1rem"
         >
